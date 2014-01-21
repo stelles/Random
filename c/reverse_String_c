@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+
+
+// Reverse a string
+// simple reversing of the pointers
+void string_reverse1(char *string){
+
+  char * end = string + strlen(string)-1;
+  char temp;
+  
+  while (string < end){
+    temp = *string;
+    *string = *end;
+    *end = temp;
+    end--;
+    string++;
+  }
+  
+
+  
+  
+  
+
+  
+  }
+  
+ 
+
+
+char * string_reverse2(const char *string)
+{
+  int length = strlen(string);
+  char * result = malloc(length);
+  int i;
+  for(i = 0; i <= length; i++){
+
+    *(result + length - 1 - i) = *string;
+    string++;
+    }
+   return result;
+   
+   
+    
+  
+}
+
+
+int main (void){
+  
+  const char * str = "test";
+  
+  printf("%s\n", string_reverse2(str));
+  
+  }
+
+
